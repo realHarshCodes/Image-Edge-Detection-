@@ -204,6 +204,6 @@ This technique forms a **fundamental building block** of modern computer vision 
 
 ---
 
-> **Author:** *(Rampariya Harsh)*  
-> **Project:** *(Image Edge Detection Using Gradient )*  
-> **Institution:** *(JG University)*
+> **Author:** Rampariya Harsh  
+> **Project:** Image Edge Detection Using Gradient (Vector Calculus Approach)  
+> **University:** JG University
