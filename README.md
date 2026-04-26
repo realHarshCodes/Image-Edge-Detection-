@@ -1,120 +1,82 @@
-# IMAGE EDGE DETECTION USING GRADIENT (VECTOR CALCULUS APPROACH)
+# Image Edge Detection Using Gradient (Vector Calculus Approach)
 
----
+## Overview
+This project applies vector calculus (gradient) to detect edges in images. The image is modeled as a scalar field I(x, y), and edges are identified where intensity changes sharply.
 
-## 1. OVERVIEW
+## Objective
+Detect edges by computing the gradient magnitude of pixel intensity and extracting regions with high variation.
 
-This project demonstrates image edge detection using vector calculus concepts, specifically the gradient operator. The image is modeled as a scalar function I(x, y), and edges are identified based on variations in pixel intensity.
+## Mathematical Formulation
 
----
-
-## 2. OBJECTIVE
-
-The objective is to detect edges in a digital image by computing the gradient magnitude of intensity changes using vector calculus and image processing techniques.
-
----
-
-## 3. MATHEMATICAL FORMULATION
-
-An image is represented as a scalar field:
-
+Scalar field:  
 I(x, y)
 
-The gradient is defined as:
-
+Gradient:  
 ∇I = ( ∂I/∂x , ∂I/∂y )
 
-The gradient magnitude is:
+Gradient Magnitude (Main Formula):  
+|∇I| = sqrt( (∂I/∂x)^2 + (∂I/∂y)^2 )
 
-|∇I| = √( (∂I/∂x)² + (∂I/∂y)² )
+Interpretation:
+- High |∇I| → edges  
+- Low |∇I| → smooth regions  
 
-- High values indicate edges  
-- Low values indicate smooth regions  
+## Working Principle
 
----
+The image is treated as a scalar field I(x, y).  
+Partial derivatives measure intensity change:
 
-## 4. WORKING PRINCIPLE (VECTOR CALCULUS)
+- ∂I/∂x → horizontal change  
+- ∂I/∂y → vertical change  
 
-The input image is treated as a scalar field I(x, y), where each pixel represents intensity.
+These are computed using the Sobel operator.  
+The gradient magnitude determines edge strength.
 
-The change in intensity is computed in two directions:
-- Horizontal: ∂I/∂x  
-- Vertical: ∂I/∂y  
-
-These derivatives are approximated using the Sobel operator.
-
-The gradient magnitude |∇I| represents the strength of intensity variation:
-- Large magnitude → strong edge  
-- Small magnitude → smooth region  
-
-After computing the gradient magnitude, thresholding is applied to extract only significant edges, producing the final output image.
-
----
-
-## 5. METHODOLOGY AND IMPLEMENTATION
+## Methodology
 
 1. Load input image  
-2. Convert image to grayscale  
+2. Convert to grayscale  
 3. Compute gradients using Sobel operator  
 4. Calculate gradient magnitude  
-5. Normalize values to range 0–255  
-6. Apply thresholding  
+5. Normalize values  
+6. Apply threshold  
 7. Display results  
 
----
-
-## 6. TECHNOLOGIES USED
+## Technologies Used
 
 - Python  
 - OpenCV  
 - NumPy  
 - Matplotlib  
 
----
+## Input and Output
 
-## 7. INPUT AND OUTPUT
+Input Image:  
+![Input](images/input.jpg)
 
-### Input Image
-![Input Image](images/input.jpg)
+Output Image (Edge Detection):  
+![Output](images/Output.png)
 
-### Output Image (Edge Detection)
-![Output Image](images/Output.png)
+## How to Run
 
----
+Step 1: Install Dependencies  
+pip install opencv-python numpy matplotlib  
 
-## 8. HOW TO RUN THE PROJECT
+Step 2: Run Project  
+jupyter notebook  
 
-Follow the steps below to execute the project:
+Open:  
+vector.project.ipynb  
 
-### Step 1: Install Required Libraries
+Run all cells to see output.
 
-pip install opencv-python numpy matplotlib
+## Results
 
-
-### Step 2: Start Jupyter Notebook
-
-jupyter notebook
-
-### Step 3: Run the Project
-
-- Open the file: `vector.project.ipynb`  
-- Click **Run All Cells**  
-- The output images will be displayed  
-
----
-
-## 9. RESULTS
-
-The system produces:
 - Original image  
-- Gradient magnitude representation  
-- Final edge-detected image  
+- Gradient magnitude image  
+- Edge detection result  
 
-Edges are clearly visible in regions with high intensity variation.
-
----
-
-## 10. APPLICATIONS
+## Applications
 
 - Object detection  
 - Medical imaging  
@@ -122,8 +84,7 @@ Edges are clearly visible in regions with high intensity variation.
 - Image segmentation  
 - Computer vision  
 
----
+## Conclusion
 
-## 11. CONCLUSION
-
-This project demonstrates how vector calculus, specifically gradients and partial derivatives, can be applied to image processing. By analyzing intensity variations, edges can be effectively detected, forming a fundamental technique in computer vision and artificial intelligence.
+This project shows how vector calculus (gradients) can be applied to image processing.  
+Gradient magnitude effectively detects edges by identifying intensity variations.
