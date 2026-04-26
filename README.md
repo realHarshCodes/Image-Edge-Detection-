@@ -82,20 +82,24 @@ After computing the gradient magnitude, thresholding is applied to extract only 
 
 ---
 
-## 8. HOW TO RUN
+## 8. HOW TO RUN THE PROJECT
 
-### Step 1: Install Dependencies
+Follow the steps below to execute the project:
+
+### Step 1: Install Required Libraries
 
 pip install opencv-python numpy matplotlib
 
-### Step 2: Run the Project
 
-If using Jupyter Notebook:
+### Step 2: Start Jupyter Notebook
 
 jupyter notebook
 
-Then open:
-vector.project.ipynb
+### Step 3: Run the Project
+
+- Open the file: `vector.project.ipynb`  
+- Click **Run All Cells**  
+- The output images will be displayed  
 
 ---
 
