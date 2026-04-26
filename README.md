@@ -18,21 +18,21 @@ The objective is to detect edges in a digital image by computing the gradient ma
 
 An image is represented as a scalar field:
 
-\[
+$$
 I(x, y)
-\]
+$$
 
 The gradient of the image is defined as:
 
-\[
+$$
 \nabla I = \left( \frac{\partial I}{\partial x}, \frac{\partial I}{\partial y} \right)
-\]
+$$
 
 The magnitude of the gradient is:
 
-\[
+$$
 |\nabla I| = \sqrt{\left(\frac{\partial I}{\partial x}\right)^2 + \left(\frac{\partial I}{\partial y}\right)^2}
-\]
+$$
 
 This magnitude represents the rate of intensity change in the image.
 
@@ -45,13 +45,17 @@ This magnitude represents the rate of intensity change in the image.
 
 The image edge detection process is carried out through the following steps:
 
-The input image is first acquired and converted into grayscale to simplify processing. After this, gradient components in both horizontal and vertical directions are computed using the Sobel operator, which approximates partial derivatives \( \frac{\partial I}{\partial x} \) and \( \frac{\partial I}{\partial y} \).
+The input image is first acquired and converted into grayscale to simplify processing. Gradient components in both horizontal and vertical directions are then computed using the Sobel operator, which approximates partial derivatives:
 
-Once the gradients are obtained, the gradient magnitude is calculated using:
+$$
+\frac{\partial I}{\partial x}, \quad \frac{\partial I}{\partial y}
+$$
 
-\[
-|\nabla I| = \sqrt{(I_x)^2 + (I_y)^2}
-\]
+Once the gradients are obtained, the gradient magnitude is calculated as:
+
+$$
+|\nabla I| = \sqrt{I_x^2 + I_y^2}
+$$
 
 This magnitude is then normalized to bring pixel values into a standard range for visualization. After normalization, a threshold is applied to highlight only significant intensity changes, which correspond to edges in the image.
 
