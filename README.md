@@ -204,6 +204,6 @@ This technique forms a **fundamental building block** of modern computer vision 
 
 ---
 
-> **Author:** *(Your Name)*  
-> **Course / Project:** *(Your Course Name)*  
-> **Institution:** *(Your Institution)*
+> **Author:** *(Rampariya Harsh)*  
+> **Project:** *(Image Edge Detection Using Gradient )*  
+> **Institution:** *(JG University)*
